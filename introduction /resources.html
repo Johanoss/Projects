@@ -1,49 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
+            font-family: 'Source Sans Pro', sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 1.5rem;
+            background: rgba(255, 255, 255, 0.05); 
         }
 
         td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            padding: 12px;
+            color: #fff;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.8rem;
         }
 
         tr:nth-child(even) {
-        background-color: #dddddd;
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+            transition: opacity 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+        .resource-card {
+            background: rgba(255, 255, 255, 0.075);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            width: 100%;
+            max-width: 40rem;
+            animation: fadeIn 0.75s ease-out forwards;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-    <h2><b>Resources</b></h2>
-        <table>
-            <tr>
-                <th><b>Tool</b></th>
-                <th><b>Link</b></th>
-            </tr>
-            <tr>
-                <td>Google Gemini</td>
-                <td><a href="https://gemini.google.com/share/d1d494ccf3b7">Conversation Queries</a></td>
-            </tr>
-            <tr>
-                <td>W3schools</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>HTML5 UP (Inspiration)</td>
-                <td><a href="https://html5up.net/dimension">Template</a></td>
-            </tr>
-        </table>
+    <div id="bg"></div>
+
+    <div id="wrapper">
+        <div class="resource-card">
+            <h2 class="major">Resources</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Gemini</td>
+                        <td><a href="https://gemini.google.com/share/d1d494ccf3b7" target="_blank">Conversation Queries</a></td>
+                    </tr>
+                    <tr>
+                        <td>W3Schools</td>
+                        <td><a href="https://www.w3schools.com" target="_blank">Web Tutorials</a></td>
+                    </tr>
+                    <tr>
+                        <td>HTML5 UP</td>
+                        <td><a href="https://html5up.net/dimension" target="_blank">Dimension Template</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <ul class="icons">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i><span class="label">Home</span></a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
-
