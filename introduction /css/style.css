@@ -191,6 +191,7 @@ nav ul li a:hover { background: rgba(255, 255, 255, 0.1); }
     justify-content: center;
     list-style: none;
     margin-top: 2rem;
+    align-items: center;
 }
 
 .icons li { margin: 0 0.5rem; }
@@ -213,6 +214,15 @@ nav ul li a:hover { background: rgba(255, 255, 255, 0.1); }
     border-color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
+
+.icons li.separator {
+    margin: 0 1rem;       
+    width: 1px;           
+    height: 1.5rem;       
+    background-color: rgba(255, 255, 255, 0.2);
+    align-self: center;   
+    display: block;
+} 
 
 /* Animations */
 @keyframes fadeIn {
