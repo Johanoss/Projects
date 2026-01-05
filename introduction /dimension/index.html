@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="bg"></div>
+
+    <div id="wrapper">
+        <header id="header">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <i class="fa-regular fa-gem"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Welcome, Visitor!</h1><br>
+                <p>This is a Personalized Profile Website, created by Jonathan Mark Agbulos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <!-- <li><a href="#about">About</a></li> -->
+                </ul>
+            </nav>
+            <ul class="icons">
+                <li><a href="https://linkedin.com/in/dyonasito"><i class="fa-brands fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://facebook.com/dyonasito"><i class="fa-brands fa-facebook"></i><span class="label">Facebook</span></a></li>
+                <li><a href="https://instagram.com/dyonasito/"><i class="fa-brands fa-instagram"></i><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/JonMarkA"><i class="fa-brands fa-github"></i><span class="label">GitHub</span></a></li>
+            </ul>
+        </header>
+
+        <div id="main" style="display:none;">
+            <article id="intro">
+                <h2 class="major">
+                    About Me 
+                    <div class="close" onclick="closeArticle()"><i class="fa-solid fa-xmark"></i></div>
+                </h2>
+                <div class="intro-grid">
+                    <div class="intro-image">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" alt="Profile Image"/>
+                    </div>
+                    <div class="intro-content">
+                        <p>
+                            <b>Name: </b>Jonathan Mark Agbulos<br><br>
+                            <b>Hard Skills: </b>Basic SQL, Canva, UI<br><br>
+                            <b>Intrests: </b>Digital Illustration, Layout Design, Mobile UI Customization, Photography, Games, Data Encoding<br><br>
+                            <b>Education: </b>
+                            <ul>
+                                <li>SHS: Arellano University Jose Abad Santos Campus</li>
+                                <ul>
+                                    <li>Strand: TECH-VOC - Information & Communications Technology (ICT)</li>
+                                </ul><br>
+                                
+                                <li><span style="display: inline-block; margin-right: 5px;">College: Asia Pacific College</span><h6 style="display: inline-block;"><i>(Current)</i></h6></li>
+                                <ul>
+                                    <li>Course: Bachelor of Science in Information Technology (BSIT)</li>
+                                </ul>
+                            </ul><br>
+                            <b>Goals in Life: </b> Wealthy Life
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article id="gallery">
+                <h2 class="major">Gallery<div class="close" onclick="closeArticle()"><i class="fa-solid fa-xmark"></i></div></h2>
+                <div class="gallery">
+                    <div><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" alt="Profile Image"/></div>
+                    <div><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" alt="Profile Image"/></div>
+                    <div><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" alt="Profile Image"/></div>
+                    <div><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600" alt="Profile Image"/></div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <script>
+        const header = document.getElementById('header');
+        const main = document.getElementById('main');
+        const articles = document.querySelectorAll('#main article');
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').replace('#', '');
+                
+                // Hide Header
+                header.style.display = 'none';
+                
+                // Show Main and the target article
+                main.style.display = 'flex'; // Using flex to keep it centered
+                articles.forEach(article => {
+                    if (article.id === targetId) {
+                        article.style.display = 'block';
+                        // Trigger animation reset
+                        article.style.animation = 'none';
+                        article.offsetHeight; /* trigger reflow */
+                        article.style.animation = null; 
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+                document.body.classList.add('is-article-visible');
+            });
+        });
+
+        function closeArticle() {
+            main.style.display = 'none';
+            header.style.display = 'block';
+            document.body.classList.remove('is-article-visible');
+            
+            // Reset header animation
+            header.style.animation = 'none';
+            header.offsetHeight;
+            header.style.animation = null;
+        }
+    </script>
+</body>
+</html>

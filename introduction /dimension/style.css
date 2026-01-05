@@ -1,0 +1,352 @@
+/* Reset and Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { color: #fff; font-family: 'Source Sans Pro', sans-serif; overflow: hidden; }
+
+/* Fixed Background */
+#bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072') no-repeat center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Centering the Wrapper */
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* The Glass Card */
+#header {
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    text-align: center;
+    max-width: 100%;
+    width: 28rem;
+    transition: opacity 0.5s ease;
+}
+
+/* Navigation Links */
+nav ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+}
+
+nav ul li {
+    flex: 1;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul li:first-child { border-left: 0; }
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+}
+
+nav ul li a:hover { background: rgba(255, 255, 255, 0.1); }
+
+/*---------------------------------------------------------------------------------*/
+
+/* Main Container for Articles */
+#main article {
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 50rem; /* Wider than the main card */
+    position: relative;
+}
+
+.major {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    
+    /* Perfect Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    border-radius: 50%; /* Perfect circle */
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.close:hover { 
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.close i {
+    display: block;
+    line-height: inherit;
+}
+
+.image.main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+/* Apply animation to the Header and Articles */
+#header, #main article {
+    animation: fadeIn 0.75s ease-out forwards;
+}
+
+/* Optional: Make the background dim slightly when a modal is open */
+body.is-article-visible #bg:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+/* Social Icons Styling */
+.icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.icons li {
+    margin: 0 0.75rem;
+}
+
+.icons li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.icons li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media screen and (max-width: 736px) {
+    #header, #main article {
+        padding: 2rem 1.5rem; /* Less padding on mobile */
+        width: 90%;          /* Take up more screen width */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    nav ul li {
+        border-left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+#bg:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%), 
+                      url('https://html5up.net/uploads/demos/dimension/assets/css/images/overlay.png');
+    /* If you don't have the overlay PNG, the gradient alone helps readability */
+}
+
+/*---------------------------------------------------------------------------------*/
+
+.icons .label {
+    display: none; /* This hides the "Twitter" text but keeps the icon */
+}
+
+.icons li a i {
+    font-size: 1.2rem; /* Adjusts the size of the icon */
+}
+
+/*---------------------------------------------------------------------------------*/
+
+/* The Grid Container */
+.intro-grid {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 2rem;               /* Space between image and text */
+    margin-top: 1.5rem;
+}
+
+/* Image Styling */
+.intro-image {
+    flex: 1;                 /* Takes up proportional space */
+    max-width: 40%;          /* Prevents image from being too huge */
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;      /* Optional: slight rounding */
+    display: block;
+}
+
+/* Content Styling */
+.intro-content {
+    flex: 1.5;               /* Gives the text slightly more room than the image */
+    text-align: left;
+}
+
+.intro-content p {
+    line-height: 1.6;
+}
+
+/* Responsive Fix: Stack them on mobile */
+@media screen and (max-width: 736px) {
+    .intro-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .intro-image {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* The Grid Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1rem;                             /* Space between items */
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+/* The individual boxes (divs) */
+.gallery div {
+    background: rgba(255, 255, 255, 0.05); /* Subtle glass background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;                       /* Clips the image to the box */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Scaling the images to fit perfectly */
+.gallery div img {
+    width: 100%;
+    height: 200px;         /* Fixed height for uniformity */
+    object-fit: cover;     /* Crops image to fill the area without stretching */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect like the original template */
+.gallery div:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: 1 column on small phones */
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Container to handle the vertical line */
+.logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem; /* Space before the title */
+}
+
+/* The White Circle */
+.logo-circle {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 2; /* Keeps circle above the line */
+}
+
+/* The Diamond Icon */
+.logo-circle i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* The Vertical Line */
+.logo-container:after {
+    content: '';
+    position: absolute;
+    top: 5rem; /* Starts at bottom of circle */
+    bottom: -2.5rem; /* Extends down to the content */
+    width: 1px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.content {
+    border-top: 1px solid #fff;
+    padding-top: 2rem;
+    margin-top: 0; /* Let the logo-container handle the gap */
+}
