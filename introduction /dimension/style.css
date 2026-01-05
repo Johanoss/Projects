@@ -305,13 +305,12 @@ body.is-article-visible #bg:after {
     }
 }
 
-/* Container to handle the vertical line */
 .logo-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2.5rem; /* Space before the title */
+    margin-bottom: 0; 
 }
 
 /* The White Circle */
@@ -324,7 +323,7 @@ body.is-article-visible #bg:after {
     align-items: center;
     justify-content: center;
     background: transparent;
-    z-index: 2; /* Keeps circle above the line */
+    z-index: 2; 
 }
 
 /* The Diamond Icon */
@@ -337,8 +336,8 @@ body.is-article-visible #bg:after {
 .logo-container:after {
     content: '';
     position: absolute;
-    top: 5rem; /* Starts at bottom of circle */
-    bottom: -2.5rem; /* Extends down to the content */
+    top: 5rem; 
+    height: 2.5rem; 
     width: 1px;
     background-color: #fff;
     z-index: 1;
@@ -347,5 +346,5 @@ body.is-article-visible #bg:after {
 .content {
     border-top: 1px solid #fff;
     padding-top: 2rem;
-    margin-top: 0; /* Let the logo-container handle the gap */
+    margin-top: 2.5rem; 
 }
