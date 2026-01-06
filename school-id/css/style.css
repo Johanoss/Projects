@@ -1,0 +1,231 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e6e6e6;
+}
+
+
+.background-texture {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  object-fit: cover; 
+  opacity: 0.3;
+}
+
+.id-card-container {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  perspective: 1000px; 
+}
+
+.id-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.8s; 
+  transform-style: preserve-3d; 
+  backface-visibility: hidden; 
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.id-card-front {
+  transform: rotateY(0deg); 
+  display: flex;
+  background: linear-gradient(to right, white 40%, #fcd433 40%);
+}
+
+.id-card-back {
+  transform: rotateY(180deg);
+  background: white; 
+  color: #333; 
+  display: block; 
+  text-align: left;
+  padding: 15px;
+  box-sizing: border-box; 
+  position: relative;
+}
+
+.id-card-container:hover .id-card-front {
+  transform: rotateY(-180deg); 
+}
+
+.id-card-container:hover .id-card-back {
+  transform: rotateY(0deg);
+}
+
+.signatures-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.signature-block {
+    width: 45%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.signature-line {
+    height: 30px; 
+    border-bottom: 1px solid #333;
+    margin-bottom: 3px;
+    background: url('signature_placeholder.png') center bottom no-repeat; 
+    background-size: 80% auto;
+}
+
+.signer-name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.signer-role {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+.college-details {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+.college-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #1e3a8a; 
+    margin-bottom: 5px;
+}
+
+.college-info {
+    font-size: 9px;
+    color: #555;
+}
+
+.qr-back {
+    width: 60px; 
+    height: 60px;
+    position: absolute;
+    bottom: 15px; 
+    left: 15px;
+}
+
+.logo-text-group {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.apc-logo-back {
+    width: 20px;
+    height: 20px;
+}
+
+.college-text-logo {
+    font-size: 8px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1;
+}
+
+.left {
+ width: 40%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 10px;
+}
+
+.left img {
+ width: 100%;
+ height: auto;
+ border-radius: 5px;
+}
+
+.right {
+ width: 60%;
+ padding: 15px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ position: relative;
+ align-items: center;
+}
+
+.school-logo {
+ width: 60px;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ top: 10px;
+ padding: 10px;
+}
+
+.name {
+ font-size: 18px;
+ font-weight: bold;
+ text-align: center;
+ margin-top: 50px;
+}
+
+.fullname {
+ font-size: 14px;
+ margin: 5px 0;
+ text-align: center;
+}
+
+.course {
+ font-size: 14px;
+ font-weight: bold;
+ text-align: center;
+}
+
+.idnum {
+ font-size: 16px;
+ font-weight: bold;
+ color: white;
+ background: #1e3a8a;
+ padding: 5px 10px;
+ display: block;
+ border-radius: 4px;
+ margin-top: 8px;
+ width: 190px;
+ text-align: center;
+}
+
+.validity-row {
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+ color: #333;
+ margin-top: 10px;
+  padding: 0 5px;
+}
+
+.valid-label {
+ font-size: 8px;
+ font-weight: normal;
+ white-space: nowrap;
+}
+
+.valid-date {
+ font-size: 13px;
+ font-weight: bold;
+ white-space: nowrap;
+}
