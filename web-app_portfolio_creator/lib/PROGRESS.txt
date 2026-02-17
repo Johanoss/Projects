@@ -1,0 +1,7 @@
+PROGRESS(02/06/2026):
+
+Combined the Form and the Display View
+Added Supabase as Database
+Added Validations on Required Fields
+Added a User Image
+

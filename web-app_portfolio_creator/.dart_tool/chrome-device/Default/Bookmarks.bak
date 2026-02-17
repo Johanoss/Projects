@@ -1,0 +1,117 @@
+{
+   "checksum": "995ce29d11824ace72a8265a94e4f5cc",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13415391074403674",
+            "date_last_used": "0",
+            "guid": "5c588afc-1596-446e-9421-b3860abdc5bd",
+            "id": "14",
+            "name": "Lenovo Support",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://support.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13415391074403582",
+            "date_last_used": "0",
+            "guid": "a71039de-1f07-4938-b55d-8cc647837716",
+            "id": "13",
+            "name": "Lenovo",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13415391074403272",
+            "date_last_used": "0",
+            "guid": "fa521026-c9f4-427b-8de4-99375988aedc",
+            "id": "12",
+            "name": "McAfee",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/lenovo.html",
+            "visit_count": 0
+         }, {
+            "date_added": "13369803200491103",
+            "date_last_used": "0",
+            "guid": "bba3c5f7-1435-49f8-a2ae-0351906bd77e",
+            "id": "9",
+            "name": "Create account",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://signup.live.com/signup?contextid=FEE42271947C6E89&opid=9DBCCE4C27C91A8E&bk=1725275511&sru=https://login.live.com/login.srf%3fcontextid%3dFEE42271947C6E89%26opid%3d9DBCCE4C27C91A8E%26mkt%3dEN-US%26lc%3d1033%26bk%3d1725275511%26uaid%3db73d755a25f94c9b953bdd011161e4e1&uiflavor=web&lic=1&mkt=EN-US&lc=1033&uaid=b73d755a25f94c9b953bdd011161e4e1",
+            "visit_count": 0
+         }, {
+            "date_added": "13415387322743082",
+            "date_last_used": "0",
+            "guid": "4d413a4a-ac00-4e8e-82b1-c8777cffbac2",
+            "id": "8",
+            "name": "Lenovo Support",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://support.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13415387322742780",
+            "date_last_used": "0",
+            "guid": "9192e6ef-8006-4daa-b0af-4d7d6171d27f",
+            "id": "7",
+            "name": "Lenovo",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13415387322741551",
+            "date_last_used": "0",
+            "guid": "89384ea1-997a-40c6-b50c-ef3c757537e6",
+            "id": "6",
+            "name": "McAfee",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/lenovo.html",
+            "visit_count": 0
+         } ],
+         "date_added": "13415387322508334",
+         "date_last_used": "0",
+         "date_modified": "13415391074403674",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13415387322508334",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13415387322508334",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CpsBCh4IiIECEgiZWapSnAEAACoOEAAYASAAKAUwADgAQAASABpYdlNOSVdNRWhqTjY0RTdQNXliemYvYk1CeEo3YzM5ZWpJcUt0WHNPQ0dscHVyOWJoZzNMeW9jdThib0FqWHM3RG1VdmNXU2NtNHFrTTE2d2hNdGpKNUE9PSoYaE9nNVkxYlcrbnZxeHhxTTFiMG9FUT09SAOgBgwSjgEIAxKJAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkZGFlMmJlMzYtNWVlYi01ZmM0LTgyMjQtNWI5YjcwNWU0YmZjGAAgACgAMPHO2cyUMjj699nMlDJA+vfZzJQyShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAAMI+AmAAEo4BCAISiQEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDI4MThkOTBhLTJlZDgtNWIxOS04MjE3LWVmNDUxOGMxZDE5MRgAIAAoADDsztnMlDI45+bZzJQyQOfm2cyUMkocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAADCPgJgABKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ0ZDg4NTNjNy00NTJhLTU5NTktODZmMi00MmRjZWJlOWMyOTMYACAAKAAw687ZzJQyOLDe2cyUMkCw3tnMlDJKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASrAEICRKnAQocdEg5TlRYcHNTZUkyOHl6Z1h0N3JkUjZJb1JzPRIkYmJhM2M1ZjctMTQzNS00OWY4LWEyYWUtMDM1MTkwNmJkNzdlGAAgACgAMNe+ya+VMzjXy5CUnTJA18uQlJ0yShxEcERncFJFT1h1eG0vTFQ5My8rQXJydzd0VnM9Wh4iHHBwQUh3OEZyR2NiV0lHYVFpS05nLzgwNUZaYz1lpxzSGcI+AmAFMAA4AA==",
+   "version": 1
+}
